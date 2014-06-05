@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MkE-fX-fSJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--Shows Table View Controller - TrackT-->
+        <scene sceneID="plG-Qq-ny9">
+            <objects>
+                <viewController id="oYM-p5-r3D" customClass="ShowsTableViewController" customModule="Trakt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JLG-Mk-tL4"/>
+                        <viewControllerLayoutGuide type="bottom" id="qiN-f3-uRz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y7M-iZ-46o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-FF-GMa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="dyP-jZ-8c3" imageView="WVr-Cr-vq7" style="IBUITableViewCellStyleDefault" id="eE8-De-Otj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eE8-De-Otj" id="eZr-Bq-2Ou">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dyP-jZ-8c3">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1395-138" id="WVr-Cr-vq7">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wPv-3Y-ZhB" kind="push" identifier="SHOW_SELECTED" id="g71-hb-6Ln"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9lj-FF-GMa" firstAttribute="top" secondItem="y7M-iZ-46o" secondAttribute="top" id="3dq-nD-6Ch"/>
+                            <constraint firstAttribute="trailing" secondItem="9lj-FF-GMa" secondAttribute="trailing" id="3xF-tq-r9E"/>
+                            <constraint firstItem="qiN-f3-uRz" firstAttribute="top" secondItem="9lj-FF-GMa" secondAttribute="bottom" id="s6Y-z7-aTM"/>
+                            <constraint firstItem="9lj-FF-GMa" firstAttribute="leading" secondItem="y7M-iZ-46o" secondAttribute="leading" id="zJq-XR-xDm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TrackT" prompt="the best app in the store" id="hBq-4R-HRz">
+                        <barButtonItem key="backBarButtonItem" title="Mes séries" id="U0g-XQ-BTQ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9lj-FF-GMa" id="9fi-EM-qjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieI-qm-WVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="360"/>
+        </scene>
+        <!--Show View Controller - Guaime oeuf traune-->
+        <scene sceneID="QuW-Sq-oIa">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wPv-3Y-ZhB" customClass="ShowViewController" customModule="Trakt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XBf-gj-BNG"/>
+                        <viewControllerLayoutGuide type="bottom" id="mxE-Bq-e9j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pWc-2m-BoN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arD-at-bU3">
+                                <rect key="frame" x="0.0" y="272" width="320" height="296"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="1395-138" translatesAutoresizingMaskIntoConstraints="NO" id="Olo-QO-9lk">
+                                <rect key="frame" x="91" y="64" width="138" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="XT9-Iy-C5O"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Olo-QO-9lk" secondAttribute="centerX" id="46L-3V-XYb"/>
+                            <constraint firstItem="arD-at-bU3" firstAttribute="leading" secondItem="pWc-2m-BoN" secondAttribute="leading" id="PdR-IW-PFi"/>
+                            <constraint firstItem="Olo-QO-9lk" firstAttribute="top" secondItem="XBf-gj-BNG" secondAttribute="bottom" id="h5L-uA-u7W"/>
+                            <constraint firstItem="arD-at-bU3" firstAttribute="top" secondItem="Olo-QO-9lk" secondAttribute="bottom" constant="8" symbolic="YES" id="hCr-Gd-FZx"/>
+                            <constraint firstItem="mxE-Bq-e9j" firstAttribute="top" secondItem="arD-at-bU3" secondAttribute="bottom" id="ia0-Tn-41z"/>
+                            <constraint firstAttribute="trailing" secondItem="arD-at-bU3" secondAttribute="trailing" id="r13-xn-lu4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Guaime oeuf traune" id="xj5-WR-otl"/>
+                    <connections>
+                        <outlet property="posterImageView" destination="Olo-QO-9lk" id="Yxa-IQ-Anu"/>
+                        <outlet property="summaryTextView" destination="arD-at-bU3" id="FU3-SQ-5T6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHK-zx-SLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cQf-lB-cer">
+            <objects>
+                <navigationController id="MkE-fX-fSJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ng-bD-whs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oYM-p5-r3D" kind="relationship" relationship="rootViewController" id="bgY-wN-KRI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZmK-KS-8eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="677"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1395-138" width="138" height="203"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C335D751940B846002E4ACD /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C335D741940B846002E4ACD /* ShowViewController.swift */; };
 		0CD5D490193F6E1400EC9BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D48F193F6E1400EC9BCD /* AppDelegate.swift */; };
 		0CD5D493193F6E1400EC9BCD /* Trakt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D491193F6E1400EC9BCD /* Trakt.xcdatamodeld */; };
 		0CD5D495193F6E1400EC9BCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD5D494193F6E1400EC9BCD /* Images.xcassets */; };
 		0CD5D4A1193F6E1400EC9BCD /* TraktTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D4A0193F6E1400EC9BCD /* TraktTests.swift */; };
+		0CD5D4AB193F6FD700EC9BCD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CD5D4AA193F6FD700EC9BCD /* Storyboard.storyboard */; };
+		0CD5D4AD19405CF900EC9BCD /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D4AC19405CF900EC9BCD /* Show.swift */; };
+		0CD5D4AF194061AF00EC9BCD /* TracktService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D4AE194061AF00EC9BCD /* TracktService.swift */; };
+		0CD5D4B11940765500EC9BCD /* ShowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D4B01940765500EC9BCD /* ShowsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C335D741940B846002E4ACD /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		0CD5D48A193F6E1400EC9BCD /* Trakt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trakt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD5D48E193F6E1400EC9BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CD5D48F193F6E1400EC9BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,10 @@
 		0CD5D49A193F6E1400EC9BCD /* TraktTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraktTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD5D49F193F6E1400EC9BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CD5D4A0193F6E1400EC9BCD /* TraktTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktTests.swift; sourceTree = "<group>"; };
+		0CD5D4AA193F6FD700EC9BCD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		0CD5D4AC19405CF900EC9BCD /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		0CD5D4AE194061AF00EC9BCD /* TracktService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracktService.swift; sourceTree = "<group>"; };
+		0CD5D4B01940765500EC9BCD /* ShowsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				0CD5D48F193F6E1400EC9BCD /* AppDelegate.swift */,
+				0CD5D4AA193F6FD700EC9BCD /* Storyboard.storyboard */,
+				0C335D741940B846002E4ACD /* ShowViewController.swift */,
+				0CD5D4B01940765500EC9BCD /* ShowsTableViewController.swift */,
+				0CD5D4AC19405CF900EC9BCD /* Show.swift */,
+				0CD5D4AE194061AF00EC9BCD /* TracktService.swift */,
 				0CD5D494193F6E1400EC9BCD /* Images.xcassets */,
 				0CD5D491193F6E1400EC9BCD /* Trakt.xcdatamodeld */,
 				0CD5D48D193F6E1400EC9BCD /* Supporting Files */,
@@ -186,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CD5D495193F6E1400EC9BCD /* Images.xcassets in Resources */,
+				0CD5D4AB193F6FD700EC9BCD /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD5D4B11940765500EC9BCD /* ShowsTableViewController.swift in Sources */,
+				0CD5D4AF194061AF00EC9BCD /* TracktService.swift in Sources */,
 				0CD5D493193F6E1400EC9BCD /* Trakt.xcdatamodeld in Sources */,
 				0CD5D490193F6E1400EC9BCD /* AppDelegate.swift in Sources */,
+				0CD5D4AD19405CF900EC9BCD /* Show.swift in Sources */,
+				0C335D751940B846002E4ACD /* ShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +401,7 @@
 				0CD5D4A6193F6E1400EC9BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CD5D4A7193F6E1400EC9BCD /* Build configuration list for PBXNativeTarget "TraktTests" */ = {
 			isa = XCConfigurationList;
@@ -389,6 +410,7 @@
 				0CD5D4A9193F6E1400EC9BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

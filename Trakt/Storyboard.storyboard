@@ -32,7 +32,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1395-138" id="WVr-Cr-vq7">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="wait" id="WVr-Cr-vq7">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -52,7 +52,7 @@
                             <constraint firstItem="9lj-FF-GMa" firstAttribute="leading" secondItem="y7M-iZ-46o" secondAttribute="leading" id="zJq-XR-xDm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TrackT" prompt="the best app in the store" id="hBq-4R-HRz">
+                    <navigationItem key="navigationItem" title="TrackT" id="hBq-4R-HRz">
                         <barButtonItem key="backBarButtonItem" title="Mes séries" id="U0g-XQ-BTQ"/>
                     </navigationItem>
                     <connections>
@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="787" y="360"/>
         </scene>
-        <!--Show View Controller - Guaime oeuf traune-->
+        <!--Show View Controller - TV Show Title-->
         <scene sceneID="QuW-Sq-oIa">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="wPv-3Y-ZhB" customClass="ShowViewController" customModule="Trakt" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,11 +78,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arD-at-bU3">
                                 <rect key="frame" x="0.0" y="272" width="320" height="296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="1395-138" translatesAutoresizingMaskIntoConstraints="NO" id="Olo-QO-9lk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="wait" translatesAutoresizingMaskIntoConstraints="NO" id="Olo-QO-9lk">
                                 <rect key="frame" x="91" y="64" width="138" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="XT9-Iy-C5O"/>
@@ -99,7 +99,7 @@
                             <constraint firstAttribute="trailing" secondItem="arD-at-bU3" secondAttribute="trailing" id="r13-xn-lu4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Guaime oeuf traune" id="xj5-WR-otl"/>
+                    <navigationItem key="navigationItem" title="TV Show Title" id="xj5-WR-otl"/>
                     <connections>
                         <outlet property="posterImageView" destination="Olo-QO-9lk" id="Yxa-IQ-Anu"/>
                         <outlet property="summaryTextView" destination="arD-at-bU3" id="FU3-SQ-5T6"/>
@@ -127,7 +127,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1395-138" width="138" height="203"/>
+        <image name="wait" width="138" height="203"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

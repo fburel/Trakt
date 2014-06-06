@@ -20,30 +20,39 @@ class TracktService : NSObject
     
     func getAllShows() -> Show[]
     {
+        var shows : Show[] = [];
         
         // construction de l'url
         let url = NSURL(string: "http://api.trakt.tv/shows/trending.json/\(apiKey)");
         
         // Telechargement des donnees
-        let data = NSData(contentsOfURL: url);
+        var data = NSData(contentsOfURL: url);
         
         // parser - construire le tableau de show
-        let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray;
-        
-        var shows : Show[] = [];
-        
-        for item : AnyObject  in json
+        if data != nil
         {
-            
-            let title = item["title"] as String;
-            let overview = item["overview"] as String;
-            let poster = item["poster"] as String;
+            let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray;
             
             
-            var show = Show(title: title, overview: overview, posterURL: poster);
-            
-            shows.append(show);
+            for item : AnyObject  in json
+            {
+                
+                let title = item["title"] as String;
+                let overview = item["overview"] as String;
+                let poster = item["poster"] as String;
+                
+                
+                var show = Show(title: title, overview: overview, posterURL: poster);
+                
+                shows.append(show);
+            }
         }
+        else
+        {
+            // handling no internet error
+        }
+        
+        
     
         return shows;
         

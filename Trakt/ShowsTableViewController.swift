@@ -23,13 +23,24 @@ class ShowsTableViewController : UIViewController, UITableViewDataSource
         super.viewDidLoad();
         var service = TracktService(apiKey: API_KEY);
     
-        self.shows = service.getAllShows();
+    
+    self.shows = [];
+    
     
         println("j'ai recuperé \(self.shows?.count) series");
     
-    self.tableView.dataSource = self;
+    
+    self.tableView.hidden = true;
+
+    
+        self.tableView.dataSource = self;
     
    
+    dispatch_async(dispatch_get_main_queue(), {
+        self.shows = service.getAllShows();
+        self.tableView.reloadData();
+        self.tableView.hidden = false;
+    });
     
     
     

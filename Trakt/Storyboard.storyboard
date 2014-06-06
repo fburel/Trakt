@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="wait" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsa-lR-IP8">
+                                <rect key="frame" x="67" y="274" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-FF-GMa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,12 +49,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hVo-e7-SEE">
+                                <rect key="frame" x="20" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9lj-FF-GMa" firstAttribute="top" secondItem="y7M-iZ-46o" secondAttribute="top" id="3dq-nD-6Ch"/>
                             <constraint firstAttribute="trailing" secondItem="9lj-FF-GMa" secondAttribute="trailing" id="3xF-tq-r9E"/>
+                            <constraint firstItem="gsa-lR-IP8" firstAttribute="leading" secondItem="hVo-e7-SEE" secondAttribute="trailing" constant="27" id="Vwr-12-iez"/>
+                            <constraint firstAttribute="centerY" secondItem="hVo-e7-SEE" secondAttribute="centerY" id="eNF-BC-qKf"/>
+                            <constraint firstItem="hVo-e7-SEE" firstAttribute="leading" secondItem="y7M-iZ-46o" secondAttribute="leading" constant="20" id="gWD-qQ-o6X"/>
                             <constraint firstItem="qiN-f3-uRz" firstAttribute="top" secondItem="9lj-FF-GMa" secondAttribute="bottom" id="s6Y-z7-aTM"/>
+                            <constraint firstItem="gsa-lR-IP8" firstAttribute="centerY" secondItem="hVo-e7-SEE" secondAttribute="centerY" constant="0.5" id="vlF-yZ-9Z3"/>
                             <constraint firstItem="9lj-FF-GMa" firstAttribute="leading" secondItem="y7M-iZ-46o" secondAttribute="leading" id="zJq-XR-xDm"/>
                         </constraints>
                     </view>

@@ -36,11 +36,11 @@ class ShowsTableViewController : UIViewController, UITableViewDataSource
         self.tableView.dataSource = self;
     
    
-    dispatch_async(dispatch_get_main_queue(), {
+    dispatch_async(dispatch_get_main_queue()) {
         self.shows = service.getAllShows();
         self.tableView.reloadData();
         self.tableView.hidden = false;
-    });
+    };
     
     
     
@@ -87,14 +87,14 @@ class ShowsTableViewController : UIViewController, UITableViewDataSource
                 
                 var mainThread = dispatch_get_main_queue();
                 
-                dispatch_async(mainThread, {
+                dispatch_async(mainThread){
 
                     
                     self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None);
                     
                     
                     
-                    });
+                    };
                 
                 
             });

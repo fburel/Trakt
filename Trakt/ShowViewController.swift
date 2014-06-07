@@ -34,9 +34,15 @@ class ShowViewController : UIViewController
         
     }
     
+
+    override func viewDidDisappear(animated: Bool)
+    {
+         self.show?.removeObserver(self, forKeyPath:"imageData");
+    }
+    
     override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: NSDictionary!, context: CMutableVoidPointer)
     {
          self.posterImageView.image = UIImage(data: self.show?.imageData);
-         self.show?.removeObserver(self, forKeyPath:keyPath);
+        
     }
 }
